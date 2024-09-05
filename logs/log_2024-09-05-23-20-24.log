@@ -1,0 +1,6 @@
+[2024-09-05 23:20:24,424] werkzeug - WARNING -  * Debugger is active!
+[2024-09-05 23:20:24,432] werkzeug - INFO -  * Debugger PIN: 243-809-439
+[2024-09-05 23:20:24,443] werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2024-09-05 23:22:31,376] werkzeug - WARNING -  * Debugger is active!
+[2024-09-05 23:22:31,376] werkzeug - INFO -  * Debugger PIN: 243-809-439
+[2024-09-05 23:22:31,379] werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

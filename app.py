@@ -28,8 +28,8 @@ def webhook():
 
 if __name__ == '__main__':
     object=WeatherData()
-    #port = int(os.getenv('PORT', 5000))
-    #print("Starting app on port %d" % port)
-    #app.run(debug=True)
+    port = int(os.getenv('PORT', 5000))
+   # print("Starting app on port %d" % port)
+    app.run(debug=True)
 if __name__=='__main__':
     app.run(host='127.0.0.1',port=5000)

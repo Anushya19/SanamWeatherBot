@@ -6,7 +6,7 @@ import sys
 
 class WeatherData:
     def __init__(self):
-        self.owmapikey='4a5e1c7a350e6ead446cfa2619b590c3 '
+        self.owmapikey='4a5e1c7a350e6ead446cfa2619b590c3'
         self.owm = pyowm.OWM(self.owmapikey)
     
     '''
@@ -18,7 +18,7 @@ class WeatherData:
         try:
             self.result = req.get("queryResult")
             self.parameters = self.result.get("parameters")
-            self.city = self.parameters.get("city_name")
+            self.city = self.parameters.get("cityname")
             
             self.observation = self.owm.weather_at_place(str(self.city))
             
@@ -37,7 +37,7 @@ class WeatherData:
             self.temp_min_celsius = str(self.celsius_result.get('temp_min'))
             self.temp_max_celsius = str(self.celsius_result.get('temp_max'))
             
-            speech = "Today's the weather in " + str(self.city) + ":" + " , " +"Humidity : " + str(self.humidity) +" , " + "Wind Speed : " +str(self.wind_speed)+ " , " + "minimum temperature : " + str(self.temp_min_celsius) + " , " + "maximum temperature : " + str(self.temp_max_celsius)
+            speech = "Today's weather in " + str(self.city) + ":" + " , " +"Humidity : " + str(self.humidity) +" , " + "Wind Speed : " +str(self.wind_speed)+ " , " + "minimum temperature : " + str(self.temp_min_celsius) + " , " + "maximum temperature : " + str(self.temp_max_celsius)
         except Exception as e:
             raise AppException(e, sys)  from e  
 
