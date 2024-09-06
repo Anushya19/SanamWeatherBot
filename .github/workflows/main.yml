@@ -27,7 +27,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     - name: Build, tag, and push image to Amazon ECR
       env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REGISTRY: 211125337331.dkr.ecr.ap-south-1.amazonaws.com/github-sample
         ECR_REPOSITORY: github-sample
         IMAGE_TAG: latest
       run: |
