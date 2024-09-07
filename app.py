@@ -9,6 +9,11 @@ app = Flask(__name__)
 def index():
     return 'Web App with Python Flask!'
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
+
 # geting and sending response to dialogflow
 @app.route('/webhook', methods=['POST'])
 @cross_origin()
@@ -32,4 +37,4 @@ if __name__ == '__main__':
     #print("Starting app on port %d" % port)
     #app.run(debug=True)
 if __name__=='__main__':
-    app.run(host='127.0.0.1',port=8080)
+    app.run(host='0.0.0.0',port=8080)
